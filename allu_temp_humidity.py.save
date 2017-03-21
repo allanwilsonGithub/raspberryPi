@@ -1,0 +1,16 @@
+from sense_hat import SenseHat
+
+sense = SenseHat()
+sense.clear()
+
+temp = sense.get_temperature()
+sense.show_message("Temp: ")
+print("Temp: ")
+
+sense.show_message(str("%.1f" % temp))
+print(str("%.1f" % temp))
+
+humidity = sense.get_humidity()
+sense.show_message("Hum:")
+sense.show_message(str(round(humidity,1)))
+print(str(round(humidity,1)))
